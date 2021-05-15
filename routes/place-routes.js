@@ -17,7 +17,10 @@ const DummyPlaces = [
 ];
 
 router.get('/:pid', placesConstrollers.getByPlaceID);
-router.get('/user/:uid',placesConstrollers.getPlaceByUserid);
+router.get('/user/:uid', placesConstrollers.getPlaceByUserid);
+router.post('/insert', placesConstrollers.createPlace);
+router.patch('/:pid', placesConstrollers.updatePlace);
+router.delete('/:pid', placesConstrollers.deletePlace);
 // router.get('/:pid', (req, res, next) => {
 //     const placeid = req.params.pid
 //     const place = DummyPlaces.find(el => {
