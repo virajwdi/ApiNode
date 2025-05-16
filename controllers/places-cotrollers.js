@@ -1,7 +1,7 @@
 // const uuid = require('uuid/v4');
 const e = require('express');
 const HttpError = require('../models/http-error-model');
-let DummyPlaces = [
+let DummyPlaces = [ 
     {
         id: "p1",
         title: "Empire state building",
@@ -14,7 +14,6 @@ let DummyPlaces = [
         creator: "u1"
     }
 ];
-
 const getByPlaceID = (req, res, next) => {
     const placeId = req.params.pid;
     const places = DummyPlaces.find(el => {
