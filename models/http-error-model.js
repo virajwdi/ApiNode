@@ -4,5 +4,4 @@ class HttpError extends Error{
         this.errorCode = errorCode;
     }
 }
-
 module.exports = HttpError;
