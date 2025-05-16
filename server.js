@@ -6,8 +6,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use('/api/places', placeRoutes);
 app.use((error, req, res, next) => {
-    
-    if (res.headerSent) {
+        if (res.headerSent) {
         return next(error);
     }
     res.status(error.code||500)
